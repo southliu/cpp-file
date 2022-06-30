@@ -35,6 +35,16 @@ int main() {
 		int field_end = content.find("',", field_start);
 		string field = content.substr(field_start + 8, field_end - field_start - 8);
 
+		// 获取title
+		int title_start = content.find("title: '");
+		int title_end = content.find("',", title_start);
+		string title = content.substr(title_start + 8, title_end - title_start - 8);
+
+		// 获取fixed
+		int fixed_start = content.find("fixed: '");
+		int fixed_end = content.find("',", fixed_start);
+		string fixed = content.substr(fixed_start + 8, fixed_end - fixed_start - 8);
+
 		// 获取minWidth
 		int min_width_start = content.find("minWidth: ");
 		string min_width = content.substr(min_width_start + 10, 3);
@@ -45,20 +55,15 @@ int main() {
 			min_width = min_width.substr(0, 2);
 		};
 
-		// 删除内容中的minWidth
-		string content_start = content.substr(0, min_width_start);
-		string content_end = content.substr(min_width_start + 13);
-		content = content_start + content_end;
-		cout << content << endl;
-
 		// 插入数据
 		int index = content.rfind(" },");
-		string insert_content = ",\n    children: [{ title: total." + field +
-				", field: '" + field + "', minWidth: " + min_width + " }]\n";
-		content.insert(index, insert_content);
+		string insert_content;
+		insert_content = "{ title: '" + title + "', field: '" + field + "_father',";
+		insert_content += "\n    children: [{ title: total." + field + ", field: '" +
+							field + "', minWidth: " + min_width + ", sortable: true }]\n},";
 
 		// 将文件流写入文件中
-		write_file << content << endl;
+		write_file << insert_content << endl;
 	};
 
 	// 关闭输出流

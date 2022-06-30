@@ -1,6 +1,10 @@
 ﻿  main.cpp
 D:\case\cpp-demo\File\main.cpp(34,45): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
 D:\case\cpp-demo\File\main.cpp(35,50): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-D:\case\cpp-demo\File\main.cpp(39,51): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-D:\case\cpp-demo\File\main.cpp(55,35): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\case\cpp-demo\File\main.cpp(39,45): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\case\cpp-demo\File\main.cpp(40,50): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\case\cpp-demo\File\main.cpp(44,45): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\case\cpp-demo\File\main.cpp(45,50): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\case\cpp-demo\File\main.cpp(49,51): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\case\cpp-demo\File\main.cpp(59,35): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
   File.vcxproj -> D:\case\cpp-demo\File\x64\Debug\File.exe
